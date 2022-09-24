@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- responsive web design viewport -->
+   
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+      <!-- Creating the background circle  -->
+      <div class="circle"></div>
+
+      <!-- Header of the website  -->
+      <header>
+        <a href="#"><img  class="logo" src="./image/logo.png" alt="logo image"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+     
+      <!-- Content Section of the Website  -->
+      <div class="content">
+        <!-- // Text Box -->
+        <div class="textBox">
+            <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius obcaecati autem voluptate fuga. Amet quam harum rerum dicta assumenda illo culpa eius eligendi distinctio. Eius laboriosam natus ratione reprehenderit culpa?</p>
+            <a href="#">Learn More</a>
+        </div>
+
+        <!-- // Image Box for Selected Image -->
+        <div class="imgBox">
+            <img class="starbucks" src="./image/img1.png" >
+        </div>
+      </div>
+
+     
+      <!-- Image Box for Selecting -->
+      <ul class="thumb">
+        <li><img src="./image/thumb1.png" onclick="imgSlider('./image/img1.png'); changeCircleColor('#017143')"></li>
+        <li><img src="./image/thumb2.png" onclick="imgSlider('./image/img2.png'); changeCircleColor('#eb7495')"></li>
+        <li><img src="./image/thumb3.png" onclick="imgSlider('./image/img3.png'); changeCircleColor('#d752b1')"></li>
+      </ul>
+
+      <!-- Footer at the Right Side  -->
+      <ul class="footer">
+        <li><a href="#"><img src="./image/facebook.png" ></a></li>
+        <li><a href="#"><img src="./image/twitter.png" ></a></li>
+        <li><a href="#"><img src="./image/instagram.png" ></a></li>
+      </ul>
+
+    </section>
+
+
+<!-- Creating the JavaScript function, so that when we click on selecting image it will display at the selected image  -->
+<script type="text/javascript">
+  function imgSlider(anything){
+    document.querySelector('.starbucks').src = anything ;
+  }
+
+function changeCircleColor(color){
+  const circle = document.querySelector('.circle');
+  circle.style.background = color ;
+}
+</script>
+
+</body>
+</html>
